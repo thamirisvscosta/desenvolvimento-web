@@ -1,0 +1,108 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap');
+
+:root{
+    --preto: #1a1a1a;
+    --branco:#ffffff;
+    --fundo-azul:#39ac9c; 
+    /* 39ac9c verde-agua*/
+}
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center; /*alinha ao centro*/
+    align-items: center;
+    min-height: 100vh;
+    background: var(--preto);
+}
+
+.lista{
+    position:relative;
+    background:var(--branco);
+    width: 350px;
+}
+
+.lista h2{
+    background:var(--fundo-azul);
+    color: var(--branco);
+    padding: 10px 20px;
+    font-weight: 600;
+}
+
+.lista ul{
+    position: relative;
+    padding:20px;
+}
+
+.lista ul li{
+    position: relative;
+    list-style: none;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.lista ul li:last-child{
+    border-bottom:none;
+}
+
+.lista ul li label{
+    position:  relative;
+    display: flex; /* faz a caixa ficar ao lado do nome*/
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.lista ul li label input{
+    visibility: hidden;
+    appearance: none;
+}
+
+.lista ul li label p{
+    position: absolute;
+}
+
+.lista ul li label span{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lista ul li label span:before{
+    content: '';
+    position: absolute;
+    top: 5px;
+    width: 10px;
+    height: 5px;
+    border-left: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+    transform: rotate(-40deg);
+}
+
+.lista ul li label input:checked ~ p{
+    text-decoration: line-through;
+    color: #ccc;
+}
+
+.lista ul li label input:checked ~ span{
+    background: var(--fundo-azul);
+    border: 1px solid #39ac9c ;
+}
+
+
+.lista ul li label input:checked ~ span::before{
+    border-left: 2px solid var(--branco);
+    border-bottom: 2px solid #ffffff;
+
+}

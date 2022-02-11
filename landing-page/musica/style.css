@@ -1,0 +1,201 @@
+@charset "UTF-8";
+
+
+*{
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+}
+
+.container{
+   height: 100vh;
+   width: 100%;
+   background-image: url(images/image.png);
+   background-size: cover;
+   background-position:center;
+   position: relative;
+
+}
+
+.navbar{
+    width: 88%;
+    margin: auto;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 140px;
+    cursor:pointer;
+}
+
+.navbar ul li{
+    list-style:none ;
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color:#5f5f5f ;
+    font-size: 15px;
+}
+
+.conteudo{
+    width: 100%;
+    position: absolute;
+    top: 30%;
+}
+
+.colunaesquerda{
+    margin-left: 4%;
+}
+
+.colunaesquerda h1{
+    font-size: 68px;
+    color: #ffffff;
+    line-height:200px ;
+    float: left;
+
+}
+
+.colunadireita{
+    float: right;
+    margin-right: 6%;
+    margin-top:120px;
+    display: flex;
+    align-items: center;
+}
+
+.colunadireita p{
+    font-size: 18px;
+    color: #5f5f5f;
+    font-weight: 400;
+    margin-right: 15px;
+}
+
+#icone{
+    width:80px;
+    cursor: pointer;
+    
+}
+
+footer p{
+    background-color: #fff;
+    color: #811f1f;
+    text-align: center;
+    padding: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer p > a{
+    color: rgb(226, 147, 0);
+    text-decoration: none;
+}
+
+footer p > a:hover{
+    color: #e7546f;
+}
+
+/* deixar responsivo... */
+@media (max-width:900px) {
+    body{
+        margin:0px;
+        padding: 0px;
+    }
+
+    #sombra{
+        position: absolute;
+        top:0;
+        left: 0;
+        width:100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.6);
+        object-fit: cover;
+        opacity: 0.3;
+    }
+
+    header{
+        padding:20px;
+    }
+
+    header .logo img{
+        max-width: 60px;
+    }
+
+    header ul{
+        display: none;
+    }
+    
+    .menumobile{
+        position:relative;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        background: url(images/menu.png);
+        background-size: 30px;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 11;
+    }
+
+    .menumobile.active {
+        background: url(images/close.png);
+        background-size: 25px;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: fixed;
+        right: 20px;
+    }
+    
+    header ul.navegacao.active{
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #f3bcbc;
+        z-index: 10; /* AQUI!!! Parou na minutagem 13 min. */
+
+    }
+    
+    header ul li a{
+        display: inline-block;
+        font-size: 1.4em;
+        font-weight: 400;
+        margin: 5px 0px;
+        text-decoration: none;
+    }
+
+    header ul li a:hover{
+        color: #ffffff;
+        transition: 0.3s;
+
+    }
+
+    .conteudo .colunaesquerda h1{
+        font-size: 3em;
+        text-decoration: none;
+        text-align: center;
+        float: none;
+        justify-content: center;
+
+    }
+
+    .conteudo .colunadireita {
+        float: none;
+        justify-content: center;
+        padding-bottom: 10px;
+    }
+
+    .conteudo .colunadireita p {
+        color: white;
+    }
+    
+}

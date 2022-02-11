@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo 3d | Exemplo 7</title>
+    <link rel="shortcut icon" href="images/cubo-3d-pngwing.ico" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <nav class="nav bd-grid">
+            <!-- importante colocar o nav -->
+            <div>
+                <a href="#" class="nav__logo">Café</a>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+
+            <div class="nav__menu" id="nav-menu">
+                <div class="nav__fechar" id="nav-fechar">
+                    <i class='bx bx-x'></i>
+                    <!--ajeitar o icone de menu-->
+                </div>
+                <ul class="nav__lista">
+                    <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Blog</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Quem Somos</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="conteudo">
+        <div class="home">
+            <div class="home__bloco bd-grid">
+                <div class="home__img">
+                    <img src="images/img1.png" alt="" data-speed="-2" class="move">
+                    <img src="images/img2.png" alt="" data-speed="2" class="move">
+                    <img src="images/img3.png" alt="" data-speed="2" class="move">
+                    <img src="images/img4.png" alt="" data-speed="-2" class="move">
+                    <img src="images/img5.png" alt="" data-speed="-2" class="move">
+                    <img src="images/img6.png" alt="" data-speed="2" class="move">
+
+                </div>
+                
+                <div class="home__info">
+                    <h1 class="home__titulo">Café<br>Bebida 3D</h1>
+                    <p class="home__descricao">Vamos descobrir o mehor café<br>da semana!</p>
+                    <a href="#" class="home__botao">Vamos lá!</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer id="rodape">
+        <p>2022| Criada por &copy;<a href="#">Thamiris Costa</a></p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src='javascript.js'></script>
+</body>
+</html>

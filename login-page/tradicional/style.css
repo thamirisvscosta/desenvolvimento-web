@@ -1,0 +1,220 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap');
+
+:root{
+    --cor1: #e91e63;
+    --cor2: #03a9f4;
+    --cor3: #607d8b;
+    --cor4: #ff4584;
+    --cor5: #f53677;
+}
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+main{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+
+}
+
+main .imgBox{
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+
+main .imgBox::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(225deg,var(--cor1),var(--cor2));
+    z-index: 1; /*colocou a camada de fundo por cima*/
+    mix-blend-mode:screen; /*mistura a camada de cor com a imagem*/
+}
+
+main .imgBox img{
+    position: absolute;
+    top: 0%;    /*colar no topo*/
+    left: 0%;   /*colar na esquerda*/
+    width: 100%;    /*usar toda a largura da imagem*/
+    height: 100%;   /*usar toda altura do site*/
+    object-fit: cover;  /*não sei pra que serve*/
+    /* ficou divido no meio certinho */
+}
+
+main .conteudo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+main .conteudo .formBox{
+    width: 50%;
+}
+
+main .conteudo .formBox h2{
+    color:var(--cor3) ;
+    font-weight:600;
+    font-size: 1.4em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-bottom: 4px solid var(--cor4) ;
+    display: inline-block;
+    letter-spacing: 1px;
+}
+
+main .conteudo .formBox .inputBox{
+    margin-bottom: 20px;
+}
+
+main .conteudo .formBox .inputBox span{
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: inline-block;
+    color:var(--cor3);
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+main .conteudo .formBox .inputBox input{
+    width:100%;
+    padding: 10px 20px;
+    outline: none;
+    font-weight: 400;
+    border: 1px solid var(--cor3);
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: var(--cor3);
+    background: transparent;
+    border-radius: 30px ;
+}
+
+main .conteudo .formBox .inputBox input[type="submit"]{
+    background: var(--cor4);
+    color: #fff;
+    outline: none;
+    border:none;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+main .conteudo .formBox .inputBox input[type="submit"]:hover{
+    background:var(--cor5);
+}
+
+main .conteudo .formBox .lembrar{
+    margin-bottom: 10px;
+    color: var(--cor3);
+    font-weight: 400;
+    font-size: 14px;
+}
+
+main .conteudo .formBox .inputBox p{
+    color: var(--cor3);
+}
+
+main .conteudo .formBox .inputBox p a{
+    color: var(--cor4);
+}
+
+main .conteudo .formBox h3{
+    color: var(--cor3);
+    text-align: center;
+    margin: 80px 0px 10px;
+    font-weight: 500;
+}
+
+main .conteudo .formBox .redes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .conteudo .formBox .redes li{
+    list-style: none;
+    width: 50px;
+    height:50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--cor3);
+    border-radius: 50%;
+    margin: 0px 7px;
+    cursor: pointer;
+}
+
+main .conteudo .formBox .redes li:hover{
+    background: #ff4584;
+}
+
+main .conteudo .formBox .redes li img{
+    transform: scale(0.5);
+    filter: invert(1);
+}
+
+footer{
+    background: #ff4584;
+    padding: 1px;
+
+}
+
+footer p{
+    color: #fff;
+    text-align: center;
+    font-weight: 300;
+}
+
+footer p a{
+    color: #f3ff44;
+    text-decoration: none;
+}
+footer p a:hover{
+    color: aquamarine;
+}
+
+
+@media(max-width: 768px){
+    main .imgBox{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    main .conteudo{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    main .conteudo .formBox{
+        width: 100%;
+        padding: 40px;
+        background: rgb(255 255 255 / 0.9);
+        margin: 50px;
+    }
+
+    main .conteudo .formBox h3{
+        color: #607d8b;
+        text-align: center;
+        margin:  20px 0 10px;
+        font-weight: 500;
+    }
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks - Exemplo Landing Page 1
+    </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/starbucks-favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <section>
+        <div class="circulo"></div>
+        <header>
+            <a href="#"><img src="images/starbucks-1-png-wing.png" alt="logo.png" class="logo"></a>
+            <div class="menumobile" onclick="menu();"></div>
+            <ul class="navegacao">
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Novidades</a></li>
+                <li><a href="#">Contato</a></li>
+    
+            </ul>
+        </header>
+        <main class='conteudo'>
+            <div class="textoprincipal">
+                <h2>Não é apenas um café.<br>É <span>Starbucks!</span></h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error animi quos reprehenderit assumenda, amet et! Illo harum quos ab iure ipsum autem quae, minus qui? Nam tempore at veniam quia!</p>
+                <a href="#">Saiba Mais</a>
+            </div>
+            <div class="copo1">
+                <img src="starbucks-copo-1-png-wing.png" alt="starbucks-copo-1.png" class="starbucks">
+            </div>
+        </main>
+        <ul class="selecao">
+            <li><img src="starbucks-copo-1-pq-png-wing.png" alt="copo1-starbucks.png" onclick="imgslider('starbucks-copo-1-png-wing.png');mudacirculo('#045c37')"></li>
+            <li><img src="starbucks-copo-pq-2-png-wing.png" alt="copo2-starbucks.png" onclick="imgslider('starbucks-copo-2-png-wing.png');mudacirculo('#8d5e16')"></li>
+            <li><img src="starbucks-copo-3-pq-png-wing.png" alt="copo3-starbucks.png" onclick="imgslider('starbucks-copo-3-png-wing.png');mudacirculo('#741e3f')"></li>
+        </ul>
+        <ul class="redes">
+            <li><a href="#"><img src="images/pngwing-facebook.png" alt="facebook-starbucks.png"></a></li>
+            <li><a href="#"><img src="images/pngwing-instagram.png" alt="instagram-starbucks.png"></a></li>
+            <li><a href="#"><img src="images/pngwing-twitter.png" alt="twitter-starbucks.png"></a></li>
+            <li><a href="#"><img src="images/pngwing-tiktok.png" alt="tiktok-starbucks.png"></a></li>
+            <li><a href="#"><img src="images/pngwing-whatsapp.png" alt="whatsapp-starbucks.png"></a></li>
+        </ul>
+    </section>
+    <footer>
+        <p> 2022 | Criada por &copy; <a href="#">Thamiris Costa</a></p>
+    </footer>
+    <script type="text/javascript">
+        function imgslider(qq){
+            document.querySelector('.starbucks').src = qq;
+        }
+        // 'qq' não é um comando. Apenas escrevi alguma coisa (parametro) pra não deixar vazio
+        function mudacirculo(cor){
+            const circulo = document.querySelector('.circulo');
+            circulo.style.background = cor;
+        }
+
+        function menu(){
+            var menuseletor = document.querySelector('.menumobile');
+            var navegacao = document.querySelector('.navegacao');
+            menuseletor.classList.toggle('active');
+            navegacao.classList.toggle('active');
+        }
+        
+    </script>
+</body>
+</html>

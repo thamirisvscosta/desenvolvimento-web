@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/headset_icon-icons.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Música | Exemplo 8</title>
+</head>
+<body>
+    <div id="sombra"></div>
+    <div class="container">
+        <header class="navbar">
+            <img src="images/logo.png" class="logo" alt="logotipo">
+            <div class="menumobile" onclick="menu();"></div>
+            <ul class="navegacao">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">SOBRE NÓS</a></li>
+                <li><a href="#">PRODUTOS</a></li>
+                <li><a href="#">CONTATO</a></li>
+            </ul>
+        </header>
+        <main class="conteudo">
+            <div class="colunaesquerda">
+                <h1>O MELHOR SOM</h1>
+            </div>
+            <div class="colunadireita">
+                <p>Clique aqui para ouvir</p>
+                <img src="images/play.png" alt="play" id="icone">
+            </div>
+        </main>
+    </div>
+    <audio id="musica">
+        <source src="sound/mooveka-rockabilly-punk-rock-jamendo.mp3" type="audio/mp3">
+    </audio>
+    <footer>
+        <p> 2022| Criado por &copy; <a href="">Thamiris Costa</a></p>
+    </footer>
+<script>
+    var musica = document.getElementById('musica');
+    var icone = document.getElementById('icone');
+
+    icone.onclick = function(){
+        if(musica.paused){
+            musica.play();
+            icone.src = "images/pause.png";
+        }else{
+            musica.pause();
+            icone.src = "images/play.png";
+        }
+    }
+
+    function menu(){
+            var menuseletor = document.querySelector('.menumobile');
+            var navegacao = document.querySelector('.navegacao');
+            menuseletor.classList.toggle('active');
+            navegacao.classList.toggle('active');
+    }
+</script>
+</body>
+</html>
